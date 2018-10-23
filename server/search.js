@@ -19,6 +19,8 @@ module.exports = {
 
   /** Get the specified range of paragraphs from a book */
   getParagraphs (bookTitle, startLocation, endLocation) {
+    const startLocation = 0
+    const endLocation = 100
     const filter = [
       { term: { title: bookTitle } },
       { range: { location: { gte: startLocation, lte: endLocation } } }
