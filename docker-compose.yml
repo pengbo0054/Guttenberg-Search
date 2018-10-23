@@ -45,4 +45,4 @@ services:
     ports:                                                 #设置kibana端口，注意这是一个数组
       - "5601:5601"
 volumes:
-  esdata:
+  esdata: ../esdata
