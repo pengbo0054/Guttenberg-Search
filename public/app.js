@@ -52,8 +52,10 @@ const vm = new Vue ({
     async getParagraphs (bookTitle, offset) {
       try {
         this.bookOffset = offset
-        const start = this.bookOffset
-        const end = this.bookOffset + 10
+        /**const start = this.bookOffset
+        const end = this.bookOffset + 10*/
+        const start = 0
+        const end = 100
         const response = await axios.get(`${this.baseUrl}/paragraphs`, { params: { bookTitle, start, end } })
         return response.data.hits.hits
       } catch (err) {
