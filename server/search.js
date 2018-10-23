@@ -22,13 +22,14 @@ module.exports = {
     const startLocation = 0
     const endLocation = 100
     const filter = [
-      { term: { title: bookTitle } },
-      { range: { location: { gte: startLocation, lte: endLocation } } }
-    ]
+      { term: { title: bookTitle } }]
+      /**{ term: { author: }}]
+        range: { location: { gte: startLocation, lte: endLocation } } }*/{
+    
 
     const body = {
-      size: endLocation - startLocation,
-      sort: { location: 'asc' },
+      /** size: endLocation - startLocation,
+      sort: { location: 'asc' },*/
       query: { bool: { filter } }
     }
 
