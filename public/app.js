@@ -3,7 +3,7 @@ const vm = new Vue ({
   data () {
     return {
       baseUrl: 'http://localhost:3000', // API url
-      searchTerm: 'Hello World', // Default search term
+      searchTerm: '国务院', // Default search term
       searchDebounce: null, // Timeout for search bar debounce
       searchResults: [], // Displayed search results
       numHits: null, // Total search results found
