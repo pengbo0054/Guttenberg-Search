@@ -40,7 +40,7 @@ services:
     volumes:                                               #这里列出更改或加入的文件，注意格式，这是一个数组
       - ./plugins:/usr/share/kibana/plugins:rw             #这里加入了一个plugin文件夹，将它里面的内容写入kibana/plugins文件夹下
     environment:
-      ELASTICSEARCH_URL: http://192.168.2.11:9200          #设置elasticsearch服务器url
+      ELASTICSEARCH_URL: http://192.168.1.4:9200          #设置elasticsearch服务器url
       OPS_INTERVAL: 60000
     ports:                                                 # Expose ElasticSearch ports
       - "5601:5601"

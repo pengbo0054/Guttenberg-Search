@@ -4,7 +4,7 @@ const elasticsearch = require('elasticsearch')
 const index = 'cngov'
 const type = 'items'
 const port = 9200
-const host = process.env.ES_HOST || 'localhost'
+const host = process.env.ES_HOST || '192.168.1.4'
 const client = new elasticsearch.Client({ host: { host, port } })
 
 /** Check the ES connection status */
