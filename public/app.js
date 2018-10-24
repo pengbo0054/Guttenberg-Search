@@ -52,8 +52,9 @@ const vm = new Vue ({
     async getParagraphs (bookTitle, offset) {
       try {
         this.bookOffset = offset
-        const start = this.bookOffset
-        const end = this.bookOffset + 10
+        /**const start = this.bookOffset
+        const end = this.bookOffset + 10*/
+
         const response = await axios.get(`${this.baseUrl}/paragraphs`, { params: { bookTitle, start, end } })
         return response.data.hits.hits
       } catch (err) {
@@ -75,7 +76,7 @@ const vm = new Vue ({
       try {
         document.body.style.overflow = 'hidden'
         this.selectedParagraph = searchHit
-        this.paragraphs = await this.getParagraphs(searchHit._source.title, searchHit._source.text)
+        this.paragraphs = await this.getParagraphs(searchHit._source.title, searchHit._source.location - 5)
       } catch (err) {
         console.error(err)
       }

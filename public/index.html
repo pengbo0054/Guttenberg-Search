@@ -35,11 +35,11 @@
 
     <!-- Search Results Card List -->
     <div class="search-results" ref="searchResults">
-      <div class="mui-panel" v-for="hit in searchResults" v-on:click="showBookModal(hit)">
+      <div class="mui-panel" v-for="hit in searchResults" v-on:click="window.open(hit._source.url,'','height=1000,width=1500,scrollbars=yes,status=yes')">
         <div class="mui--text-title" v-html="hit.highlight.text[0]"></div>
         <div class="mui-divider"></div>
-        <div class="mui--text-subhead">{{ hit._source.title }} - {{ hit._source.author }}</div>
-        <div class="mui--text-body2">Location {{ hit._source.location }}</div>
+        <div class="mui--text-subhead">{{ hit._source.title }}</div>
+        <div class="mui--text-body2">{{ hit._source.author }}</div>
       </div>
     </div>
 
