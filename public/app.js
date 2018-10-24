@@ -34,16 +34,16 @@ const vm = new Vue ({
     },
     /** Get next page of search results */
     async nextResultsPage () {
-      if (this.numHits > 30) {
-        this.searchOffset += 30
-        if (this.searchOffset + 30 > this.numHits) { this.searchOffset = this.numHits - 30}
+      if (this.numHits > 10) {
+        this.searchOffset += 10
+        if (this.searchOffset + 10 > this.numHits) { this.searchOffset = this.numHits - 10}
         this.searchResults = await this.search()
         document.documentElement.scrollTop = 0
       }
     },
     /** Get previous page of search results */
     async prevResultsPage () {
-      this.searchOffset -= 30
+      this.searchOffset -= 10
       if (this.searchOffset < 0) { this.searchOffset = 0 }
       this.searchResults = await this.search()
       document.documentElement.scrollTop = 0
