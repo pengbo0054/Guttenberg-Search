@@ -2,8 +2,8 @@ const vm = new Vue ({
   el: '#vue-instance',
   data () {
     return {
-      baseUrl: 'http://localhost:3000', // API url
-      searchTerm: '国务院', // Default search term
+      baseUrl: 'http://47.52.169.124:44667', // API url 47.52.169.124:44667
+      searchTerm: '', // Default search term
       searchDebounce: null, // Timeout for search bar debounce
       searchResults: [], // Displayed search results
       numHits: null, // Total search results found

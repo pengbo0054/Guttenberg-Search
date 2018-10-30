@@ -36,7 +36,7 @@ async function resetIndex () {
 async function putBookMapping () {
   const schema = {
     title: { type: 'keyword' },
-    author: { type: 'keyword' },
+    author: { type: 'date', format: "YYYY.MM.dd" },
     location: { type: 'integer' },
     text: { type: 'text' },
     url: { type: 'text' }

@@ -5,6 +5,11 @@ module.exports = {
   queryTerm (term, offset = 0) {
     const body = {
       from: offset,
+      sort: [{
+        'author': {
+          "order":"desc"
+        }
+      }],
       query: { match: {
         text: {
           query: term,
